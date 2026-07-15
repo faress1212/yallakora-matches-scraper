@@ -2,7 +2,7 @@
 
 A web scraping project that extracts football match results — teams, final score, kickoff time, TV broadcasting channel, and match details link — from [Yallakora.com](https://www.yallakora.com) for any given date.
 
-## ⚠️ A Note on Selector Stability
+## A Note on Selector Stability
 
 Website structures can change over time. If this scraper returns zero results, the class names in `src/scraper.py` may no longer match the live site.
 
@@ -14,7 +14,7 @@ Website structures can change over time. If this scraper returns zero results, t
 
 The parsing logic itself was tested against mock HTML built from real scraped output (matching the site's structure at the time this project was created) and works correctly as long as the selectors match the live site.
 
-## 📌 Project Overview
+## Project Overview
 
 - Prompt for a date (`MM/DD/YYYY`) and fetch that day's matches page
 - Extract only **finished** matches: both team names, final score, kickoff time, TV channel, and a link to match details
@@ -22,7 +22,7 @@ The parsing logic itself was tested against mock HTML built from real scraped ou
 - Split the combined score (e.g. "3 - 0") into separate numeric columns for easier analysis
 - Export to CSV (UTF-8 with BOM, so Arabic team names display correctly in Excel)
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 yallakora-matches-scraper/
@@ -37,11 +37,11 @@ yallakora-matches-scraper/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/yallakora-matches-scraper.git
+git clone https://github.com/faress1212/yallakora-matches-scraper.git
 cd yallakora-matches-scraper
 ```
 
@@ -61,19 +61,19 @@ Or explore step-by-step in the notebook:
 jupyter notebook notebooks/yallakora_matches_scraper.ipynb
 ```
 
-## ⚖️ Responsible Scraping
+## Responsible Scraping
 
 - Check [yallakora.com/robots.txt](https://www.yallakora.com/robots.txt) and Yallakora's Terms of Service before scraping at scale.
 - Avoid sending rapid, repeated requests — space out calls if scraping multiple dates in a loop.
 - This project is for educational/personal data analysis purposes.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python
 - Requests (HTTP requests)
 - BeautifulSoup4 (HTML parsing)
 - Pandas (data handling)
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE). Scraped data belongs to its original source (Yallakora) — respect the site's terms of use.
